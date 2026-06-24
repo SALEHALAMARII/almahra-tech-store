@@ -50,12 +50,14 @@ productForm.addEventListener("submit", async (e) => {
     }
 
     const data = {
-      name: name.value.trim(),
-      category: category.value,
-      description: description.value.trim(),
-      specs: specs.value.trim(),
-      price: price.value ? Number(price.value) : null,
-      available: available.value === "true",
+      name: document.getElementById("name")?.value?.trim() || "",
+      category: document.getElementById("category")?.value || "",
+      description: document.getElementById("description")?.value?.trim() || "",
+      specs: document.getElementById("specs")?.value?.trim() || "",
+      price: document.getElementById("price")?.value
+        ? Number(document.getElementById("price").value)
+        : null,
+      available: document.getElementById("available")?.value === "true",
     };
 
     if (!data.name) {
