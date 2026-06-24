@@ -1,0 +1,90 @@
+[
+  {
+    "id": "p1",
+    "name": "راوتر واي فاي احترافي",
+    "category": "الشبكات",
+    "description": "راوتر عالي الأداء مناسب للمنازل والشركات الصغيرة مع تغطية مستقرة.",
+    "specs": "Dual Band, 4 Antennas, Gigabit Ports",
+    "price": 85,
+    "available": true,
+    "icon": "📡",
+    "featured": true
+  },
+  {
+    "id": "p2",
+    "name": "كاميرا مراقبة خارجية",
+    "category": "الكاميرات",
+    "description": "كاميرا حماية مقاومة للعوامل الخارجية بجودة عالية ورؤية ليلية.",
+    "specs": "2MP/4MP, Night Vision, Waterproof",
+    "price": 55,
+    "available": true,
+    "icon": "📷",
+    "featured": true
+  },
+  {
+    "id": "p3",
+    "name": "لابتوب أعمال Core i5",
+    "category": "الكمبيوتر",
+    "description": "لابتوب مناسب للأعمال والدراسة والبرامج اليومية بتصميم أنيق.",
+    "specs": "Core i5, 8GB RAM, 256GB SSD",
+    "price": 420,
+    "available": true,
+    "icon": "💻",
+    "featured": true
+  },
+  {
+    "id": "p4",
+    "name": "طابعة ليزر مكتبية",
+    "category": "الطابعات",
+    "description": "طابعة عملية وسريعة للمكاتب والشركات مع استهلاك اقتصادي.",
+    "specs": "Laser, USB/WiFi, Fast Print",
+    "price": 140,
+    "available": true,
+    "icon": "🖨️",
+    "featured": true
+  },
+  {
+    "id": "p5",
+    "name": "سويتش شبكات 8 منافذ",
+    "category": "الشبكات",
+    "description": "سويتش مستقر لتوسعة الشبكات الداخلية بسرعة عالية.",
+    "specs": "8 Port, Gigabit, Metal Body",
+    "price": 32,
+    "available": true,
+    "icon": "🔌",
+    "featured": false
+  },
+  {
+    "id": "p6",
+    "name": "NVR تسجيل كاميرات",
+    "category": "الكاميرات",
+    "description": "جهاز تسجيل احترافي لإدارة كاميرات المراقبة ومراجعة التسجيلات.",
+    "specs": "8CH, H.265, Remote View",
+    "price": 95,
+    "available": true,
+    "icon": "🎥",
+    "featured": false
+  },
+  {
+    "id": "p7",
+    "name": "كمبيوتر مكتبي متكامل",
+    "category": "الكمبيوتر",
+    "description": "جهاز مكتبي مناسب للشركات ونقاط البيع والاستخدام الإداري.",
+    "specs": "Core i3/i5, SSD, Business Case",
+    "price": 310,
+    "available": false,
+    "icon": "🖥️",
+    "featured": false
+  },
+  {
+    "id": "p8",
+    "name": "أحبار وملحقات طابعات",
+    "category": "الطابعات",
+    "description": "ملحقات وأحبار أصلية ومتوافقة للطابعات المكتبية.",
+    "specs": "HP, Canon, Epson Compatible",
+    "price": null,
+    "available": true,
+    "icon": "🧾",
+    "featured": false
+  }
+]
