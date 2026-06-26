@@ -138,8 +138,8 @@ async function loadProducts() {
             <td>${p.price ?? "اختياري"}</td>
             <td>${p.available !== false ? "متوفر" : "غير متوفر"}</td>
             <td>
-              <button data-edit="${p.id}" class="btn btn-primary">تعديل</button>
-              <button data-del="${p.id}" class="btn btn-dark">حذف</button>
+              <button type="button" data-edit="${p.id}" class="btn btn-primary">تعديل</button>
+              <button type="button" data-del="${p.id}" class="btn btn-dark">حذف</button>
             </td>
           </tr>
         `;
@@ -159,8 +159,11 @@ async function loadProducts() {
       };
     });
 
-    productsTable.querySelectorAll("[data-edit]").forEach((b) => {
-      b.onclick = () => editProduct(b.dataset.edit);
+    productsTable.querySelectorAll("[data-edit]").forEach((btn) => {
+      btn.addEventListener("click", () => {
+        const id = btn.getAttribute("data-edit");
+        editProduct(id);
+      });
     });
   } catch (err) {
     console.error("Load Products Error:", err);

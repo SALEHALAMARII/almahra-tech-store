@@ -1,11 +1,109 @@
-<!doctype html><html lang="ar" dir="rtl"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>المنتجات | المهره تك</title><link rel="stylesheet" href="css/styles.css"></head><body><header class="topbar"><div class="container"><span>المهره - الغيظة - جولة الشروخ</span><span>📞 778055100 | 730445055</span></div></header>
-<nav class="nav"><div class="container">
-<a class="brand" href="index.html"><img src="assets/logo.png" alt="شعار شركة المهره تك"><span><strong>شركة المهره تك</strong><span>للتقنية والحلول المحدودة</span></span></a>
-<button class="icon-btn menu-toggle" id="menuToggle">☰</button>
-<div class="nav-links" id="navLinks">
-<a href="index.html">الرئيسية</a><a href="products.html">المنتجات</a><a href="about.html">من نحن</a><a href="contact.html">تواصل معنا</a><a href="admin/login.html">دخول الإدارة</a>
-</div><button class="icon-btn cart-toggle" id="cartToggle">🛒 <span class="cart-count" id="cartCount">0</span></button>
-</div></nav><section class="page-hero"><div class="container"><h1>المنتجات</h1><p>تصفح المنتجات حسب القسم وأضفها للسلة.</p></div></section><section class="section"><div class="container"><div class="section-head"><select id="categoryFilter"><option value="all">كل الأقسام</option><option>الشبكات</option><option>الكاميرات</option><option>الكمبيوتر</option><option>الطابعات</option></select><input id="searchInput" placeholder="ابحث عن منتج..." style="padding:12px;border-radius:14px;border:1px solid var(--border)"></div><div class="grid product-grid" id="productsGrid"></div></div></section><aside class="cart-drawer" id="cartDrawer"><div class="cart-backdrop" id="cartBackdrop"></div><div class="cart-panel">
-<div class="cart-head"><strong>سلة الطلبات</strong><button class="icon-btn" id="closeCart">✕</button></div>
-<div class="cart-items" id="cartItems"></div><div class="cart-footer"><div style="display:flex;justify-content:space-between;margin-bottom:14px"><strong>الإجمالي</strong><strong id="cartTotal">0</strong></div><button class="btn btn-primary" id="checkoutBtn" style="width:100%">إتمام الطلب عبر واتساب</button></div>
-</div></aside><footer class="footer"><div class="container footer-grid"><div><img src="assets/logo.png" alt="شعار المهره تك" style="width:150px"><p>حلول تقنية موثوقة في الشبكات والكاميرات والكمبيوتر والطابعات.</p></div><div><h3>الأقسام</h3><p>الشبكات<br>الكاميرات<br>الكمبيوتر<br>الطابعات</p></div><div><h3>تواصل</h3><p>778055100<br>730445055<br>المهره - الغيظة - جولة الشروخ</p></div></div></footer><script type="module" src="js/products.js"></script></body></html>
+<!doctype html>
+<html lang="ar" dir="rtl">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>المنتجات | المهره تك</title>
+    <link rel="stylesheet" href="css/styles.css" />
+  </head>
+  <body>
+    <!-- <header class="topbar">
+      <div class="container">
+        <span>المهره - الغيظة - جولة الشروخ</span
+        ><span>📞 778055100 | 730445055</span>
+      </div>
+    </header> -->
+    <nav class="nav">
+      <div class="container">
+        <a class="brand" href="index.html"
+          ><img src="assets/logo.png" alt="شعار شركة المهره تك" /><span
+            ><strong>شركة المهره تك</strong
+            ><span>للتقنية والحلول المحدودة</span></span
+          ></a
+        >
+        <button class="icon-btn menu-toggle" id="menuToggle">☰</button>
+        <div class="nav-links" id="navLinks">
+          <a href="index.html">الرئيسية</a><a href="products.html">المنتجات</a
+          ><a href="about.html">من نحن</a><a href="contact.html">تواصل معنا</a
+          ><a href="admin/login.html">دخول الإدارة</a>
+        </div>
+        <button class="icon-btn cart-toggle" id="cartToggle">
+          🛒 <span class="cart-count" id="cartCount">0</span>
+        </button>
+      </div>
+    </nav>
+    <section class="page-hero">
+      <div class="container">
+        <h1>المنتجات</h1>
+        <p>تصفح المنتجات حسب القسم وأضفها للسلة.</p>
+      </div>
+    </section>
+    <section class="section">
+      <div class="container">
+        <div class="section-head">
+          <select id="categoryFilter">
+            <option value="all">كل الأقسام</option>
+            <option>الشبكات</option>
+            <option>الكاميرات</option>
+            <option>الكمبيوتر</option>
+            <option>الطابعات</option></select
+          ><input
+            id="searchInput"
+            placeholder="ابحث عن منتج..."
+            style="
+              padding: 12px;
+              border-radius: 14px;
+              border: 1px solid var(--border);
+            "
+          />
+        </div>
+        <div class="grid product-grid" id="productsGrid"></div>
+      </div>
+    </section>
+    <aside class="cart-drawer" id="cartDrawer">
+      <div class="cart-backdrop" id="cartBackdrop"></div>
+      <div class="cart-panel">
+        <div class="cart-head">
+          <strong>سلة الطلبات</strong
+          ><button class="icon-btn" id="closeCart">✕</button>
+        </div>
+        <div class="cart-items" id="cartItems"></div>
+        <div class="cart-footer">
+          <div
+            style="
+              display: flex;
+              justify-content: space-between;
+              margin-bottom: 14px;
+            "
+          >
+            <strong>الإجمالي</strong><strong id="cartTotal">0</strong>
+          </div>
+          <button class="btn btn-primary" id="checkoutBtn" style="width: 100%">
+            إتمام الطلب عبر واتساب
+          </button>
+        </div>
+      </div>
+    </aside>
+    <footer class="footer">
+      <div class="container footer-grid">
+        <div>
+          <img
+            src="assets/logo.png"
+            alt="شعار المهره تك"
+            style="width: 150px"
+          />
+          <p>حلول تقنية موثوقة في الشبكات والكاميرات والكمبيوتر والطابعات.</p>
+        </div>
+        <div>
+          <h3>الأقسام</h3>
+          <p>الشبكات<br />الكاميرات<br />الكمبيوتر<br />الطابعات</p>
+        </div>
+        <div>
+          <h3>تواصل</h3>
+          <p>778055100<br />730445055<br />المهره - الغيظة - جولة الشروخ</p>
+        </div>
+      </div>
+    </footer>
+    <script type="module" src="js/products.js"></script>
+  </body>
+</html>
