@@ -72,6 +72,11 @@ productForm.addEventListener("submit", async (e) => {
 
     if (imageId) {
       data.imageId = imageId;
+    } else if (productId.value) {
+      const oldProduct = products.find((x) => String(x.id) === String(productId.value));
+      if (oldProduct?.imageId) {
+        data.imageId = oldProduct.imageId;
+      }
     }
 
     if (productId.value) {
@@ -197,3 +202,23 @@ function editProduct(id) {
 }
 
 requireLogin();
+
+
+
+
+function fixAdminInitialScroll() {
+  if (window.innerWidth <= 768) {
+    setTimeout(() => {
+      window.scrollTo({
+        left: document.body.scrollWidth,
+        top: 0,
+        behavior: "instant",
+      });
+
+      document.documentElement.scrollLeft = document.documentElement.scrollWidth;
+      document.body.scrollLeft = document.body.scrollWidth;
+    }, 300);
+  }
+}
+
+fixAdminInitialScroll();
