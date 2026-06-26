@@ -171,19 +171,29 @@ async function loadProducts() {
 }
 
 function editProduct(id) {
-  const p = products.find((x) => x.id === id);
+  const p = products.find((x) => String(x.id) === String(id));
 
-  if (!p) return;
+  if (!p) {
+    alert("لم يتم العثور على المنتج المطلوب تعديله");
+    return;
+  }
 
-  productId.value = p.id;
-  name.value = p.name || "";
-  category.value = p.category || "الشبكات";
-  price.value = p.price || "";
-  available.value = String(p.available !== false);
-  description.value = p.description || "";
-  specs.value = p.specs || "";
+  document.getElementById("productId").value = p.id;
+  document.getElementById("name").value = p.name || "";
+  document.getElementById("category").value = p.category || "الشبكات";
+  document.getElementById("price").value = p.price ?? "";
+  document.getElementById("available").value = String(p.available !== false);
+  document.getElementById("description").value = p.description || "";
+  document.getElementById("specs").value = p.specs || "";
 
-  scrollTo({ top: 0, behavior: "smooth" });
+  const formSection = document.getElementById("productForm");
+
+  if (formSection) {
+    formSection.scrollIntoView({
+      behavior: "smooth",
+      block: "start",
+    });
+  }
 }
 
 requireLogin();
