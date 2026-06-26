@@ -44,7 +44,17 @@ export function renderCart(){
   if(count) count.textContent=cart.reduce((s,x)=>s+x.qty,0);
   if(total) total.textContent=cartTotal()+" $";
   if(list){
-    list.innerHTML = cart.length ? cart.map(x=>`<div class="cart-item"><div style="font-size:30px">${x.icon||"📦"}</div><div><strong>${x.name}</strong><div>${x.price?x.price+" $":"السعر عند الطلب"}</div><div class="qty"><button data-dec="${x.id}">-</button><span>${x.qty}</span><button data-inc="${x.id}">+</button></div></div><button class="icon-btn" data-remove="${x.id}">🗑️</button></div>`).join("") : "<p>لا توجد منتجات في السلة.</p>";
+    list.innerHTML = cart.length ? cart.map(x=>`<div class="cart-item">
+      <div class="cart-product-img">
+        ${
+          x.imageId
+            ? `<img src="${storage.getFileView(appwriteConfig.bucketId, x.imageId)}" alt="${x.name}">`
+            : x.imageUrl
+            ? `<img src="${x.imageUrl}" alt="${x.name}">`
+            : `<span>📦</span>`
+        }
+      </div>
+      <div><strong>${x.name}</strong><div>${x.price?x.price+" $":"السعر عند الطلب"}</div><div class="qty"><button data-dec="${x.id}">-</button><span>${x.qty}</span><button data-inc="${x.id}">+</button></div></div><button class="icon-btn" data-remove="${x.id}">🗑️</button></div>`).join("") : "<p>لا توجد منتجات في السلة.</p>";
     list.querySelectorAll("[data-remove]").forEach(b=>b.onclick=()=>removeFromCart(b.dataset.remove));
     list.querySelectorAll("[data-inc]").forEach(b=>b.onclick=()=>{const item=cart.find(x=>x.id===b.dataset.inc); updateQty(item.id,item.qty+1)});
     list.querySelectorAll("[data-dec]").forEach(b=>b.onclick=()=>{const item=cart.find(x=>x.id===b.dataset.dec); updateQty(item.id,item.qty-1)});
